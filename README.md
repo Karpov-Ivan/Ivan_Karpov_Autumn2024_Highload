@@ -15,7 +15,7 @@
 6. Оставление отзывов о приобретённых товарах.
 7. Оформление заказа.
 8. Статус заказа при доставке.
-9. Добавление товаров продавцом на площадку.
+9. Добавление товаров продавцом на площадку с учётом фотографии.
 10. Авторизация, регистрация для продавцов.
 
 ## Продуктовые особенности
@@ -51,8 +51,34 @@
 Мужской      | 30.00%
 Женский      | 70.00% 
 
+# 2 Расчёт нагрузки
+
+Ежемесячная аудитория Wildberries: 58.7 млн. пользователей.
+
+Ежедневная аудитория Wildberries: 24.2 млн. пользователей.
+
+Согласно исследованию [[4]](https://adindex.ru/news/researches/2023/02/28/310879.phtml):
+
+Количество регистраций в день: 40 тыс.
+
+Средняя длительность сессии: 11 минут [[5]](https://dzen.ru/a/ZkT8wKCKkBgtJMT-).
+
+Исходя из исследования [[6]](https://www.vedomosti.ru/business/articles/2024/05/05/1035562-ozon-i-wildberries):
+
+Количество заходов в день: 11 млн.
+
+### Хранилище данных для пользователя
+Посчитаем количество товаров в день на одного пользователя : 618 млн. / 58.2 млн. ~ 3 [тов/чел]
+
+Параметр          | Число
+-------------| -------------
+ПРОДОЛЖЕНИЕ СЛЕДУЕТ
+
 # Список источников
 
 1. https://www.similarweb.com/ru/website/wildberries.ru/#demographics
 2. https://oborot.ru/news/kolichestvo-posetitelej-marketplejsov-wildberries-i-ozon-v-mesyac-sravnyalos-kuda-eshhe-hodyat-pokupateli-i209527.html
 3. https://dzen.ru/a/ZkT8wKCKkBgtJMT-
+4. https://adindex.ru/news/researches/2023/02/28/310879.phtml
+5. https://dzen.ru/a/ZkT8wKCKkBgtJMT-
+6. https://www.vedomosti.ru/business/articles/2024/05/05/1035562-ozon-i-wildberries
