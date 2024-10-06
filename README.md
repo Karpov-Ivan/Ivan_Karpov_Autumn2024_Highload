@@ -290,6 +290,104 @@ L7:
 Для шифрования будем пользоваться услугами центра [Let's encrypt](https://letsencrypt.org)
 Для оптимизации установки соединения будет пользоваться Session cache
 
+# 5 Логическая схема базы данных
+
+## Схема базы данных
+[Ссылка на логическую схему БД](https://dbdiagram.io/d/6702ea1cfb079c7ebd82a4c2)
+
+![Highload Ivan Karpov DB](https://github.com/Karpov-Ivan/Ivan_Karpov_Autumn2024_Highload/blob/main/images/db.png)
+
+Тип       | Размер в байтах
+----------| ----------
+uuid      | 16
+int       | 4
+numeric   | 8
+timestamp | 8
+boolean   | 1
+text      | Динамический, зависит от длины (1 символ ≈ 1 байт)
+
+**Session**
+```TeX
+  token(32) + profile_id(16) = 48
+``` 
+---
+**Profile**
+```TeX
+  id(16) + login(32) + description(128) + phone(19) + password_hash(64) + type(10) = 269 байт
+``` 
+---
+**Address**
+```TeX
+  id(16) + profiel_id(16) + country(16) + city(16) + street(16) + house(8) + is_current(1) = 89 байт
+``` 
+---
+**Product**
+```TeX
+  id(16) + name(128) + description(1024) + price(4) + rating(8) + category_id(16) + count_comments(4) + file_id(16) + company_id(16) = 1232 байт
+``` 
+---
+**Category**
+```TeX
+  id(16) + name(16) + parent(16) = 48 байт
+``` 
+---
+**File**
+```TeX
+  id(16) + link_file(64) + file_type(16) = 96 байт
+``` 
+---
+**Comment**
+```TeX
+  id(16) + profile_id(16) + product_id(16) + comment(256) + rating(4) + file_id(16) = 324 байт
+``` 
+---
+**Cart**
+```TeX
+  id(16) + profile_id(16) = 32 байт
+``` 
+---
+**Shopping_Cart_Item**
+```TeX
+  id(16) + cart_id(16) + product_id(16) + quantity(4) = 52 байт
+``` 
+---
+**Order_Item**
+```TeX
+  id(16) + product_id(16) + order_info_id(16) + quantity(4) + price(4) = 56 байт
+``` 
+---
+**Order_Info**
+```TeX
+  id(16) + address_id(16) + profile_id(16) + status_id(16) + creation_at(8) + delivery_at(8) = 80 байт
+``` 
+---
+**Status**
+```TeX
+  id(16) + name(16) = 32 байт
+``` 
+---
+**Company**
+```TeX
+  id(16) + name(32) + profile_id(16) = 64 байт
+``` 
+---
+
+Таблица            | Размер строки [byte]
+-------------------| ---------------
+Session            | 48
+Profile            | 269
+Address            | 89  
+Product            | 1232
+Category           | 48
+File               | 96
+Comment            | 324
+Cart               | 32
+Shopping_Cart_Item | 52
+Order_Item         | 56
+Order_Info         | 80
+Status             | 32
+Company            | 64
+
 # Список источников
 
 1. https://www.similarweb.com/ru/website/wildberries.ru/#demographics
