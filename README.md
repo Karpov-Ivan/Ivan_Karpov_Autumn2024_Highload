@@ -295,7 +295,82 @@ L7:
 ## Схема базы данных
 [Ссылка на логическую схему БД](https://dbdiagram.io/d/6702ea1cfb079c7ebd82a4c2)
 
-![Highload Ivan Karpov DB](https://github.com/Karpov-Ivan/Ivan_Karpov_Autumn2024_Highload/blob/main/images/DB_WB.png)
+![Highload Ivan Karpov DB](https://github.com/Karpov-Ivan/Ivan_Karpov_Autumn2024_Highload/blob/main/images/DB_WB_2.png)
+
+**PRODUCT -> FILE_ID**
+```bash
+{
+  "main_image": "https://s3.amazonaws.com/mybucket/main_image.jpg",
+  "gallery": [
+    "https://s3.amazonaws.com/mybucket/image1.jpg",
+    "https://s3.amazonaws.com/mybucket/image2.jpg"
+  ]
+}
+``` 
+---
+**PRODUCT -> ATTRIBUTES**
+```bash
+{
+  "sizes": ["S", "M", "L", "XL"],
+  "color": "red",
+  "weight": "1.2 kg",
+  "material": "cotton",
+  "dimensions": {
+    "width": "30 cm",
+    "height": "50 cm",
+    "depth": "10 cm"
+  }
+}
+``` 
+---
+**COMMENT -> FILE_ID**
+```bash
+{
+  "main_image": "https://s3.amazonaws.com/mybucket/main_image.jpg",
+  "gallery": [
+    "https://s3.amazonaws.com/mybucket/image1.jpg",
+    "https://s3.amazonaws.com/mybucket/image2.jpg"
+  ]
+}
+``` 
+---
+**ORDER_ITEM -> STATUS**
+```bash
+{
+  "current_status": "delivered", // Текущий статус заказа
+  "history": [
+    {
+      "status": "pending", // Статус: ожидается
+      "updated_at": "2024-10-01T12:00:00Z" // Дата изменения статуса
+    },
+    {
+      "status": "shipped", // Статус: отправлен
+      "updated_at": "2024-10-02T08:30:00Z"
+    },
+    {
+      "status": "delivered", // Статус: доставлен
+      "updated_at": "2024-10-03T14:45:00Z"
+    }
+  ]
+}
+``` 
+---
+**ORDER_ITEM -> ITEMS**
+```bash
+[
+  {
+    "product_id": "uuid1",
+    "quantity": 2,
+    "price": 1000
+  },
+  {
+    "product_id": "uuid2",
+    "quantity": 1,
+    "price": 500
+  }
+]
+``` 
+---
 
 Тип       | Размер в байтах
 ----------| ----------
