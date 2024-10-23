@@ -311,7 +311,7 @@ L7:
 ## Схема базы данных
 [Ссылка на логическую схему БД](https://dbdiagram.io/d/6702ea1cfb079c7ebd82a4c2)
 
-![Highload Ivan Karpov DB](https://github.com/Karpov-Ivan/Ivan_Karpov_Autumn2024_Highload/blob/main/images/DB_WB_3.png)
+![Highload Ivan Karpov DB](https://github.com/Karpov-Ivan/Ivan_Karpov_Autumn2024_Highload/blob/main/images/DB_WB_4.png)
 
 **PRODUCT -> FILE_ID**
 ```bash
