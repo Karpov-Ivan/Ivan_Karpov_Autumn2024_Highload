@@ -387,6 +387,66 @@ L7:
 ]
 ``` 
 ---
+**SHOPPING_CART_ITEM -> ITEMS**
+```bash
+[
+  {
+    "product_id": "uuid1",
+    "quantity": 2,
+    "price": 1000,
+    "added_at": "2024-10-23T10:00:00Z"
+  },
+  {
+    "product_id": "uuid2",
+    "quantity": 1,
+    "price": 500,
+    "added_at": "2024-10-23T11:00:00Z"
+  }
+]
+``` 
+---
+**MODERATION -> STATUS**
+```bash
+[
+  'pending',
+  'approved',
+  'rejected'
+]
+``` 
+---
+**PRODUCT_EVENT -> EVENT_TYPE**
+```bash
+[
+  'view',
+  'click',
+  'purchase'
+]
+``` 
+---
+**COMPANY_EVENT -> EVENT_TYPE**
+```bash
+[
+   'product_added',
+   'moderation_completed'
+]
+``` 
+---
+**COMMENT_EVENT -> EVENT_TYPE**
+```bash
+[
+   'view',
+   'rating_updated'
+]
+``` 
+---
+**PRODUCT_RATING_EVENT -> EVENT_TYPE**
+```bash
+[
+   'new_rating',
+   'comment_added'
+]
+``` 
+---
 
 Тип       | Размер в байтах
 ----------| --------------------------------------------------
