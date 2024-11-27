@@ -795,7 +795,7 @@ P(Class∣Features)= (P(Features∣Class)⋅P(Class)) / P(Features)
 
 [Ссылка на схему проекта](https://drive.google.com/file/d/1843D7aB6kqBdhD87LkK3NdYXAH8yxSeq/view?usp=sharing)
 
-![Highload Ivan Karpov SCHEME](https://github.com/Karpov-Ivan/Ivan_Karpov_Autumn2024_Highload/blob/main/images/SCHEME_3.png)
+![Highload Ivan Karpov SCHEME](https://github.com/Karpov-Ivan/Ivan_Karpov_Autumn2024_Highload/blob/main/images/SCHEME_4.png)
 
 <h2 id="10">10 Обеспечение надёжности</h2>
 
