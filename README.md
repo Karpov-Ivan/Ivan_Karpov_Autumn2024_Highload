@@ -970,3 +970,4 @@ AWS (S3)      | 230     | 64              | 512 GB          | 100 TB          | 
 5. https://dzen.ru/a/ZkT8wKCKkBgtJMT-
 6. https://www.vedomosti.ru/business/articles/2024/05/05/1035562-ozon-i-wildberries
 7. https://www.cnews.ru/news/line/2023-06-08_wildberries_itogi_i_kvartala_2023
+8. https://docs.google.com/presentation/d/123EhoKYMzLS5KQA5uYkatSBn8r78cieOl-re51MkK-4/edit#slide=id.g31f7740ff9b_1_195
